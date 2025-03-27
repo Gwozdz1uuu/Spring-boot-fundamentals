@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: store
+stripe:
+  apiUrl: https://api.stripe.com
+  timeout: 1001
+  enabled: true
+  supported-currencies: USD,EUR,GBP
+app:
+  page-size: 10
+server:
+  port: 8081
+payment-gateway: paypal
+mail:
+  host: https://gwozdeckidaniel@gmail.com
+  port: 8081
