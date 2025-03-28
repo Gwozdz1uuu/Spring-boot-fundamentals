@@ -1,4 +1,4 @@
-package com.Gwozdz1uu.store;
+package com.Gwozdz1uu.store.OldStaff;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

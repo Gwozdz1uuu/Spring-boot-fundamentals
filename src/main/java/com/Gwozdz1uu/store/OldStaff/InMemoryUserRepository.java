@@ -1,4 +1,4 @@
-package com.Gwozdz1uu.store;
+package com.Gwozdz1uu.store.OldStaff;
 
 import org.springframework.stereotype.Repository;
 
@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Repository
-public class InMemoryUserRepository implements UserRepository{
-    private final Map<String,User> users = new HashMap<>();
+public class InMemoryUserRepository implements UserRepository {
+    private final Map<String, User> users = new HashMap<>();
     @Override
     public void save(User user){
         System.out.println("Saving user: "+ user);

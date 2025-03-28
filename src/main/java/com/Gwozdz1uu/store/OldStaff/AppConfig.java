@@ -1,11 +1,8 @@
-package com.Gwozdz1uu.store;
+package com.Gwozdz1uu.store.OldStaff;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.core.annotation.Order;
 
 @Configuration
 public class AppConfig {

@@ -1,6 +1,4 @@
-package com.Gwozdz1uu.store;
-
-import org.springframework.stereotype.Service;
+package com.Gwozdz1uu.store.OldStaff;
 
 //@Service("paypal")
 public class PayPalPaymentService implements PaymentService {

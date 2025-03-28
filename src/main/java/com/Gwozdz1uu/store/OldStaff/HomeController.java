@@ -1,4 +1,4 @@
-package com.Gwozdz1uu.store;
+package com.Gwozdz1uu.store.OldStaff;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

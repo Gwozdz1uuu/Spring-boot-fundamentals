@@ -1,4 +1,4 @@
-package com.Gwozdz1uu.store;
+package com.Gwozdz1uu.store.OldStaff;
 
 public interface UserRepository {
     void save(User user);

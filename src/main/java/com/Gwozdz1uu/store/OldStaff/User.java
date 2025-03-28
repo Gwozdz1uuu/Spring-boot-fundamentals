@@ -1,4 +1,4 @@
-package com.Gwozdz1uu.store;
+package com.Gwozdz1uu.store.OldStaff;
 
 public class User {
     private Long id;
