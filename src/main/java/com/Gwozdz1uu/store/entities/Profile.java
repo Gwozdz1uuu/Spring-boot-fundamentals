@@ -5,6 +5,10 @@ import lombok.*;
 
 import java.time.LocalDate;
 
+@ToString
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Table(name="profiles")
@@ -26,4 +30,10 @@ public class Profile {
 
     @Column(name="loyalty_points")
     private Integer loyaltyPoints;
+
+    @OneToOne
+    @JoinColumn(name="id")
+    @MapsId
+    @ToString.Exclude
+    private User user;
 }

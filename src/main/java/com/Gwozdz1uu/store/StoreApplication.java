@@ -1,6 +1,8 @@
 package com.Gwozdz1uu.store;
 
 import com.Gwozdz1uu.store.entities.Address;
+import com.Gwozdz1uu.store.entities.Profile;
+import com.Gwozdz1uu.store.entities.Tag;
 import com.Gwozdz1uu.store.entities.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,14 +22,12 @@ public class StoreApplication {
 				.password("elomordo")
 				.build();
 
-		var address = Address.builder()
-				.street("street")
-				.city("city")
-				.state("state")
-				.zip("zip")
-				.build();
+		var profile = Profile.builder()
+						.bio("bio")
+								.build();
+		user.setProfile(profile);
+		profile.setUser(user);
 
-		user.AddAddress(address);
 		System.out.println(user);
 	}
 
