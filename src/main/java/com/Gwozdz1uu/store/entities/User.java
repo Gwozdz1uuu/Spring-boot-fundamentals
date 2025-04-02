@@ -3,6 +3,10 @@ package com.Gwozdz1uu.store.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@ToString
 @Setter
 @Getter
 @AllArgsConstructor
@@ -14,6 +18,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false,name="id")
     private Long id;
 
     @Column(nullable = false,name = "name")
@@ -24,5 +29,19 @@ public class User {
 
     @Column(nullable = false,name = "password")
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    @Builder.Default
+    private List<Address> addresses = new ArrayList<>();
+
+    public void AddAddress(Address address){
+        addresses.add(address);
+        address.setUser(this);
+    }
+
+    public void removeAddress(Address address){
+        addresses.remove(address);
+        address.setUser(null);
+    }
 
 }

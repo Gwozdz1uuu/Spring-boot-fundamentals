@@ -1,5 +1,6 @@
 package com.Gwozdz1uu.store;
 
+import com.Gwozdz1uu.store.entities.Address;
 import com.Gwozdz1uu.store.entities.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +19,16 @@ public class StoreApplication {
 				.email("M@gmail.com")
 				.password("elomordo")
 				.build();
+
+		var address = Address.builder()
+				.street("street")
+				.city("city")
+				.state("state")
+				.zip("zip")
+				.build();
+
+		user.AddAddress(address);
+		System.out.println(user);
 	}
 
 }
