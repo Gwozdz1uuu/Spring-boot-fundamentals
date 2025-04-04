@@ -1,41 +1,26 @@
 package com.Gwozdz1uu.store.entities;
 
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
-@Setter
 @Getter
+@Setter
 @Entity
-@Builder
 @Table(name = "categories")
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Byte id;
 
-    @Id
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
 
-    @OneToOne(mappedBy = "category")
-    @Builder.Default
+    @OneToMany(mappedBy = "category")
     private Set<Product> products = new HashSet<>();
 
-    public void AddProduct(Product product){
-        products.add(product);
-        product.setCategory(this);
-    }
-
-    public void RemoveProduct(Product product){
-        products.remove(product);
-        product.setCategory(null);
-    }
 }

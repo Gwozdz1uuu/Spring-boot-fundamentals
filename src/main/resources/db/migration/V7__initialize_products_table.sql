@@ -7,3 +7,4 @@ CREATE TABLE IF NOT EXISTS store.products
     CONSTRAINT category_id_fk
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
+
