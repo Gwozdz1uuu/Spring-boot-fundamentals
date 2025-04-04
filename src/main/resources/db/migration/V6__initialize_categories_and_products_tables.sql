@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS store.categories
+(
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
