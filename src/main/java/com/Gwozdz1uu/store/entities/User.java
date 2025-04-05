@@ -52,6 +52,10 @@ public class User {
         tag.getUsers().add(this);
     }
 
+
+    @OneToOne(mappedBy = "user")
+    private Profile profile;
+
     @Builder.Default
     @ManyToMany
     @JoinTable(
@@ -61,7 +65,12 @@ public class User {
     )
     private Set<Tag> tags = new HashSet<>();
 
+    @ManyToMany
+    @JoinTable(
+            name = "wishlist",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+    private Set<Product> wishlist = new HashSet<>();
 
-    @OneToOne(mappedBy = "user")
-    private Profile profile;
 }
