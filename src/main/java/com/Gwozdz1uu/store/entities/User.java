@@ -54,7 +54,6 @@ public class User {
 
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
-
     private Profile profile;
 
     @Builder.Default
@@ -74,4 +73,7 @@ public class User {
     )
     private Set<Product> wishlist = new HashSet<>();
 
+    public void addFavoriteProduct(Product product) {
+        wishlist.add(product);
+    }
 }

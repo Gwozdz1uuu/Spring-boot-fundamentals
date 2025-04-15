@@ -22,7 +22,7 @@ public class StoreApplication {
 //		repository.deleteById(1L);
 
 		var service = context.getBean(UserService.class);
-		service.deleteRelated();
+		service.removeAllProducts();
 
 	}
 

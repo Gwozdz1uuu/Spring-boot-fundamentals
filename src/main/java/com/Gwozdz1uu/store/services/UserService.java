@@ -1,7 +1,6 @@
 package com.Gwozdz1uu.store.services;
 
-import com.Gwozdz1uu.store.entities.Address;
-import com.Gwozdz1uu.store.entities.User;
+import com.Gwozdz1uu.store.entities.*;
 import com.Gwozdz1uu.store.repositories.AddressRepository;
 import com.Gwozdz1uu.store.repositories.ProfileRepository;
 import com.Gwozdz1uu.store.repositories.UserRepository;
@@ -11,6 +10,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 
 @AllArgsConstructor
 @Service
@@ -19,6 +20,8 @@ public class UserService {
     private final ProfileRepository profileRepository;
     private final EntityManager entityManager;
     private final AddressRepository addressRepository;
+    private final ProductRepository productRepository;
+    private final CategoryRepository categoryRepository;
 
     @Transactional
     public void showEntityStates(){
@@ -79,4 +82,15 @@ public class UserService {
         userRepository.save(user);
     }
 
+    @Transactional
+    public void manageProducts(){
+        var user = userRepository.findById(3L).orElseThrow();
+        var products = productRepository.findAll();
+        products.forEach(user::addFavoriteProduct);
+        userRepository.save(user);
+    }
+    @Transactional
+    public void removeAllProducts(){
+        productRepository.deleteById(4L);
+    }
 }
