@@ -1,13 +1,10 @@
 package com.Gwozdz1uu.store.services;
 
 import com.Gwozdz1uu.store.entities.*;
-import com.Gwozdz1uu.store.repositories.AddressRepository;
-import com.Gwozdz1uu.store.repositories.ProfileRepository;
-import com.Gwozdz1uu.store.repositories.UserRepository;
+import com.Gwozdz1uu.store.repositories.*;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -92,5 +89,10 @@ public class UserService {
     @Transactional
     public void removeAllProducts(){
         productRepository.deleteById(4L);
+    }
+
+    @Transactional
+    public void updateProductPrice(){
+        productRepository.updatePriceByCategory(BigDecimal.valueOf(10),(byte)1);
     }
 }
