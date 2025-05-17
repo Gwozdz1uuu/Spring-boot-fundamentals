@@ -1,5 +1,6 @@
 package com.Gwozdz1uu.store.repositories;
 
+import com.Gwozdz1uu.store.entities.Category;
 import com.Gwozdz1uu.store.entities.Product;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -40,5 +41,20 @@ public class ProductCriteriaRepositoryImpl implements ProductCriteriaRepository 
         cq.select(product).where(predicates.toArray(new Predicate[predicates.size()]));
 
         return entityManager.createQuery(cq).getResultList();
+    }
+
+    @Override
+    public List<Product> findProductsByCategory(Category category) {
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Product> cq = builder.createQuery(Product.class);
+        Root<Product> product = cq.from(Product.class);
+
+        List<Predicate> predicates = new ArrayList<>();
+        if(category != null){
+            predicates.add(builder.equal(product.get("category"), category));
+        }
+        cq.select(product).where(predicates.toArray(new Predicate[predicates.size()]));
+        return entityManager.createQuery(cq).getResultList();
+
     }
 }

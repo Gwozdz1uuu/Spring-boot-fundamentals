@@ -2,11 +2,12 @@ package com.Gwozdz1uu.store.services;
 
 import com.Gwozdz1uu.store.entities.*;
 import com.Gwozdz1uu.store.repositories.*;
+import com.Gwozdz1uu.store.repositories.specifications.ProductSpec;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.*;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -116,6 +117,43 @@ public class UserService {
     public void fetchProductsByCriteria(){
         var products =  productRepository.findProductsByCriteria("prod", BigDecimal.valueOf(1), BigDecimal.valueOf(10));
         products.forEach(System.out::println);
+    }
+
+    public void fetchProductsBySpecifications(String name, BigDecimal minPrice, BigDecimal maxPrice){
+        Specification<Product> spec = Specification.where(null);
+
+        if(name != null){
+            spec = spec.and(ProductSpec.hasName(name));
+        }
+        if(minPrice!=null){
+            spec = spec.and(ProductSpec.hasPriceGreaterThanOrEqualTo(minPrice));
+        }
+        if(maxPrice!=null){
+            spec = spec.and(ProductSpec.hasPriceLessThanOrEqualTo(maxPrice));
+        }
+
+        productRepository.findAll(spec).forEach(System.out::println);
+    }
+
+    public void fetchSortedProducts(){
+        var sort = Sort.by("name","price").and(
+                Sort.by("price").descending()
+        );
+
+        productRepository.findAll(sort).forEach(System.out::println);
+    }
+
+    public void fetchPaginatedProducts(int pageNumber, int size){
+        PageRequest pageRequest = PageRequest.of(pageNumber, size);
+        Page<Product> page = productRepository.findAll(pageRequest);
+
+        var products = page.getContent();
+        products.forEach(System.out::println);
+
+        var totalPages = page.getTotalPages();
+        var totalElements = page.getTotalElements();
+        System.out.println("Total Pages: " + totalPages);
+        System.out.println("Total Elements: " + totalElements);
     }
 
     @Transactional
