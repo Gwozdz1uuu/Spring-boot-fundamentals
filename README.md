@@ -89,7 +89,11 @@ Build Spring-boot-fundamentals from the source and install dependencies:
 ```
 
 ### Project Structure Overview
-![Project Structure](src/main/java/com/Gwozdz1uu/store/images/psv1.png)
+![Houses custom repository interfaces and specification-based query logic.](src/main/java/com/Gwozdz1uu/store/images/psv1.png)
+![core domain models that map to database tables.](src/main/java/com/Gwozdz1uu/store/images/psv2.png)
+![Contains Data Transfer Objects and summary classes used to move data between layers or external interfaces.](src/main/java/com/Gwozdz1uu/store/images/psv3.png)
+
+
 
 
 
