@@ -23,17 +23,6 @@
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Testing](#testing)
-
----
-
 ## Overview
 
 Spring-boot-fundamentals is a comprehensive starter kit designed to jumpstart your Spring Boot-based store application. It provides a well-structured data model, core entities, and essential services for notifications, order processing, and payments, all built with scalability and maintainability in mind.
