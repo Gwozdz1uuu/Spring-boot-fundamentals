@@ -25,17 +25,28 @@
 
 ## Overview
 
-Spring-boot-fundamentals is a comprehensive starter kit designed to jumpstart your Spring Boot-based store application. It provides a well-structured data model, core entities, and essential services for notifications, order processing, and payments, all built with scalability and maintainability in mind.
+`spring-boot-fundamentals` is **my personal learning project** for mastering the essentials of Spring Boot.  
+This project was built as part of my Spring Boot learning journey, following along with an online course.
+I developed the code step by step alongside the lessons to reinforce core concepts and gain hands-on experience with real-world examples.
 
-**Why Spring-boot-fundamentals?**
+### Why this project exists
 
-This project streamlines the development of e-commerce systems by offering:
+This repo helped me explore Spring Boot fundamentals by providing:
 
-- 🧩 **[Colorful Emoji] Data Model Architecture:** Clear blueprint for database design, ensuring data integrity and seamless integration.
-- 🚀 **[Colorful Emoji] Modular Service Components:** Ready-to-use services for notifications, orders, and payment handling.
-- 🔍 **[Colorful Emoji] Flexible Data Access:** Custom repositories and specifications for dynamic querying and filtering.
-- ⚙️ **[Colorful Emoji] Simplified Configuration:** Centralized environment setup for consistent development and deployment.
-- 💡 **[Colorful Emoji] Extensible & Maintainable:** Clean architecture supporting future growth and feature expansion.
+- 🗄️ **Practical Data Model Practice**  
+  A simple e-commerce–style schema for experimenting with JPA/Hibernate mappings and relationships.
+
+- ⚡ **Lightweight Service Layer Examples**  
+  Notification, order-processing, and payment sample services to understand dependency injection and business-logic separation.
+
+- 🔍 **Flexible Querying Techniques**  
+  Custom repositories, Criteria API, and Specification patterns for dynamic filtering and search.
+
+- ⚙️ **Configuration Playground**  
+  Profiles, YAML vs. properties, and environment variables to see how Spring handles configuration.
+
+> **Note:** Everything here is for educational purposes only— **not** production-ready.
+
 
 ---
 
@@ -63,6 +74,20 @@ This project requires the following dependencies:
    <version>3.5.0</version>
 </dependency>
 ``` 
+### Project Structure Overview
+<h3 align="center">📁 Project Structure Overview</h3>
+
+<p align="center">
+  <img src="src/main/java/com/Gwozdz1uu/store/images/psv1.png" alt="Repository Interfaces" width="600"/>
+</p>
+
+<p align="center">
+  <img src="src/main/java/com/Gwozdz1uu/store/images/psv2.png" alt="Entities Overview" width="600"/>
+</p>
+
+<p align="center">
+  <img src="src/main/java/com/Gwozdz1uu/store/images/psv3.png" alt="DTOs Overview" width="600"/>
+</p>
 
 ### Installation
 
@@ -87,17 +112,3 @@ Build Spring-boot-fundamentals from the source and install dependencies:
 ```sh
 ❯ mvn install
 ```
-
-### Project Structure Overview
-![Houses custom repository interfaces and specification-based query logic.](src/main/java/com/Gwozdz1uu/store/images/psv1.png)
-![core domain models that map to database tables.](src/main/java/com/Gwozdz1uu/store/images/psv2.png)
-![Contains Data Transfer Objects and summary classes used to move data between layers or external interfaces.](src/main/java/com/Gwozdz1uu/store/images/psv3.png)
-
-
-
-
-
-
-<div align="left"><a href="#top">⬆ Return</a></div>
-
----
