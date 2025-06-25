@@ -29,16 +29,16 @@ I developed the code step by step alongside the lessons to reinforce core concep
 
 This repo helped me explore Spring Boot fundamentals by providing:
 
-- 🗄️ **Practical Data Model Practice**  
+- **Practical Data Model Practice**  
   A simple e-commerce–style schema for experimenting with JPA/Hibernate mappings and relationships.
 
-- ⚡ **Lightweight Service Layer Examples**  
+- **Lightweight Service Layer Examples**  
   Notification, order-processing, and payment sample services to understand dependency injection and business-logic separation.
 
-- 🔍 **Flexible Querying Techniques**  
+- **Flexible Querying Techniques**  
   Custom repositories, Criteria API, and Specification patterns for dynamic filtering and search.
 
-- ⚙️ **Configuration Playground**  
+- **Configuration Playground**  
   Profiles, YAML vs. properties, and environment variables to see how Spring handles configuration.
 
 > **Note:** Everything here is for educational purposes only— **not** production-ready.
