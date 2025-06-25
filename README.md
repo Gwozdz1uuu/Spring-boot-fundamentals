@@ -6,14 +6,10 @@
 
 # SPRING-BOOT-FUNDAMENTALS
 
-<em>Empowering Innovation Through Seamless Spring Boot Foundations</em>
-
 <!-- BADGES -->
 <img src="https://img.shields.io/github/last-commit/Gwozdz1uuu/Spring-boot-fundamentals?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 <img src="https://img.shields.io/github/languages/top/Gwozdz1uuu/Spring-boot-fundamentals?style=flat&color=0080ff" alt="repo-top-language">
 <img src="https://img.shields.io/github/languages/count/Gwozdz1uuu/Spring-boot-fundamentals?style=flat&color=0080ff" alt="repo-language-count">
-
-<em>Built with the tools and technologies:</em>
 
 <img src="https://img.shields.io/badge/XML-005FAD.svg?style=flat&logo=XML&logoColor=white" alt="XML">
 <img src="https://img.shields.io/badge/YAML-CB171E.svg?style=flat&logo=YAML&logoColor=white" alt="YAML">
