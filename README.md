@@ -48,8 +48,6 @@ This repo helped me explore Spring Boot fundamentals by providing:
 
 ## Getting Started
 
-### Prerequisites
-
 This project requires the following dependencies:
 
 - **Programming Language:** Java
